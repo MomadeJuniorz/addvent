@@ -1,7 +1,29 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-   <a href="https://outlook.live.com/owa/?rru=addevent&startdt={STARTTIME}&enddt={ENDTIME}&subject={TITLE}&location={LOCATION}&body={BODY}&allday=false&uid={SOMERANDOMKEY}&path=/calendar/view/Month</a>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<title>addevent</title>
+</head>
+<body>
+	  <a href="" id="insert-event">add event</a>
+	
+	  <script>
+	  	let event = {
+	  		STARTTIME:"2021-01-26T13:51:50.417-07:00",
+	  		ENDTIME:"2021-11-07",
+	  		TITLE:"Testing",
+	  		LOCATION:"Maputo",
+	  		BODY:"Hello World"
+	  	}
+
+	  	let giveTime;
+
+	  	let  addevent = document.getElementById('insert-event');
+	  	let link = "https://outlook.live.com/owa/?rru=addevent&startdt="+event.STARTTIME+"&enddt="+event.ENDTIME+"&subject="+event.TITLE+"&location="+event.LOCATION+"&body="+event.BODY+"&allday=false&uid={SOMERANDOMKEY}&path=/calendar/view/Month";
+	  	eventInserted = addevent.href=link;
+
+
+
+	</script>
+</body>
 </html>
